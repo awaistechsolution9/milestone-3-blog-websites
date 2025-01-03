@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+  background-color: white;
+}
+@keyframes bgFadeChange {
+  0% {
+    background-image: url('/images/blog1.jpg');
+    opacity: 0.8;
+  }
+  25% {
+    background-image: url('/images/blog2.jpg');
+    opacity: 1;
+  }
+  50% {
+    background-image: url('/images/blog3.jpg');
+    opacity: 0.8;
+  }
+  75% {
+    background-image: url('/images/blog4.jpg');
+    opacity: 1;
+  }
+  100% {
+    background-image: url('/images/blog1.jpg');
+    opacity: 0.8;
+  }
+}
+
+.bgSlideShow {
+  animation: bgFadeChange 16s ease-in-out infinite;
+  background-size: cover;
+  background-position: center;
+  transition: background-image 1.5s ease-in-out;
+}
